@@ -1,6 +1,7 @@
 #include <caesar.h>
 #include <unistd.h>
 #include <vigenere.h>
+// Calls the libraries with functions i have made
 
 int main(int argc, char *argv[]) {
   while (*argv[1] == 'e' && *argv[2] == 'c') {
