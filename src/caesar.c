@@ -1,14 +1,10 @@
 #include <stdio.h>
 
 char *caesar_encrypt(char *message) {
-  for (int i = 0; message[i] != '\0';
-       i++) { // Goes through the message until it hits the NULL value
-    char ch = message[i]; // Defines a char for every character in the message
-    if (ch >= 'A' && ch <= 'Z') { // Keeps the area in upper case letters
+  for (int i = 0; message[i] != '\0'; i++) {
+    char ch = message[i];
+    if (ch >= 'A' && ch <= 'Z') {
       message[i] = ((ch - 'A' + 3) % 26) + 'A';
-      /*Defines every character shifted 3 moves the the "right"
-      % 26 is used to loop around whenever the new value for a character exceeds
-      the number og letters available */
     }
   }
   puts(message);
